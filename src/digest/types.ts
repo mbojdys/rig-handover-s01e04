@@ -16,6 +16,8 @@ export type Night = {
   night: string;
   rows: DigestRow[];
   badLines: number;
+  // Log lines per status, not jobs.
+  counts: Record<RunStatus, number>;
 };
 
 // Returns null when runs/<night>.jsonl does not exist. Unparseable lines are counted, never thrown.
